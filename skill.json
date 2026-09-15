@@ -1,0 +1,36 @@
+{
+  "name": "genpark-agentic-hallucination-grounding-checker-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Sentence-level RAG factual grounding and hallucination detection engine calculating context token attribution ratios.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "ai-safety",
+  "tags": [
+    "hallucination-detection",
+    "rag-grounding",
+    "fact-verification",
+    "attribution-checker",
+    "ai-safety"
+  ],
+  "inputs": {
+    "generated_answer": {
+      "type": "string"
+    },
+    "reference_context": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "grounding_ratio": {
+      "type": "number"
+    },
+    "hallucination_free_verdict": {
+      "type": "boolean"
+    },
+    "confidence_score": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
